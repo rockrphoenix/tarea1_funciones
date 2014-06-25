@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf8">
+	<title>area de un circulo</title>
+	<script type="text/javascript">
+		(function calcularAreaTriangulo(base,altura) { 
+			var numero = prompt("introduzca el valor de la base del triangulo");
+			var numero2 = prompt("introduzca el valor de  la altura del triangulo");
+			var base = parseFloat(numero);
+			var altura = parseFloat(numero2);
+			var area = (base*altura)/2;
+			document.write("<p> el valor del área del triangulo es igual a: "+ area +"</P>");
+			})();
+		function calcularAreaCirculo (radio) { 
+			var numero = prompt("introduzca el radio");
+			var radio = parseFloat(numero);
+			var area = Math.PI * Math.pow(radio,2);
+			document.getElementById("circulo").value=area;
+			
+		}
+		var calcularAreaCuadro=function (lado) { 
+			var numero = prompt("introduzca el valor de cada lado");
+			var lado = parseFloat(numero);
+			var area = Math.pow(lado,2);
+			document.getElementById("cuadro").value=area;
+				
+		}
+
+	</script>
+</head>
+<body>
+	<input type="button" value="calcular circulo" onclick="calcularAreaCirculo()"/>
+	<input type="text" id="circulo"><br>
+	<input type="button" value="calcular cuadro" onclick="calcularAreaCuadro()"/>
+	<input type="text" id="cuadro">
+</body>
+</html>
